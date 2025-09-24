@@ -1,0 +1,38 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mydb";
+
+$conn = new mysqli($servername, $username, $password , $dbname);
+
+if ($conn->connect_error) {
+  die( "connection failed:" . $conn->connect_error );
+}
+
+$stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email) VALUES (?,?,?");
+$stmt->bind_param("sss", $firstname, $lastname, $email);
+
+$firstname = "Azamat";
+$lastname = "Asqaraliyev";
+$email   = "Azamat@gmail.com";
+$stmt->execute();
+
+
+$firstname = "Ibrohim";
+$lastname = "Muhidjonov";
+$email   = "Ibrohim@gmail.com";
+$stmt->execute();
+
+
+$firstname = "Ulug'bek";
+$lastname = "Nabijonov";
+$email   = "Ulug'bek@gmail.com";
+$stmt->execute();
+
+echo "Qo'shildi";
+
+$stmt->close();
+$stmt->close();
+
+?>
