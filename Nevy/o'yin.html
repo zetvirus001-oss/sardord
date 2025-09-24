@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O'yin</title>
+  <style>
+    .game-area {
+      width: 500px;
+      height: 300px;
+      border: 2px solid black;
+      position: relative;
+    }
+
+    .hero {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+    }
+
+    .obstacle {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute;
+      bottom: 0;
+      left: 200px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="game-area">
+  <div class="hero" id="hero"></div>
+  <div class="obstacle" id="obstacle"></div>
+</div>
+
+<script>
+  const hero = document.getElementById("hero");
+  const obstacle = document.getElementById("obstacle");
+
+  // To'siq va qahramon o'zaro to'qnashishini tekshirish
+  function checkCollision() {
+    const heroRect = hero.getBoundingClientRect();
+    const obstacleRect = obstacle.getBoundingClientRect();
+
+    if (
+      heroRect.right > obstacleRect.left &&
+      heroRect.left < obstacleRect.right &&
+      heroRect.bottom > obstacleRect.top &&
+      heroRect.top < obstacleRect.bottom
+    ) {
+      alert("To'siq bilan to'qnashuv!");
+      // To'siqni yo'q qilish
+      obstacle.style.display = "none";
+    }
+  }
+
+  // Harakat qilish va tekshirish
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowRight") {
+      // O'yin qahramonini o'ngga harakatlantirish
+      hero.style.left = (parseInt(hero.style.left) || 0) + 10 + "px";
+      checkCollision(); // Har safar harakat qilishda to'siqni tekshiramiz
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onlayn Do'konim</title>
+    <style>
+         body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff7e5f;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(120deg, #f5f5f5 0%, #ffffff 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.6rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #feb47b, #ff7e5f);
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-item h3 {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+
+        .product-item p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .product-item button {
+            padding: 10px 20px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-item button:hover {
+            background-color: #feb47b;
+        }
+
+        .contact {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 15px;
+        }
+
+        form label {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        form input, form textarea {
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #ff7e5f;
+        }
+
+        form button {
+            padding: 15px 20px;
+            background-color: #ff7e5f;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #feb47b;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }   
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Bosh sahifa</a></li>
+                <li><a href="#products">Mahsulotlar</a></li>
+                <li><a href="#contact">Aloqa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Onlayn Do'konimga Xush Kelibsiz</h1>
+        <p>Ajoyib mahsulotlar uchun yagona manzilingiz</p>
+        <a href="#products" class="btn">Hoziroq xarid qiling</a>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Bizning Tavsiya Etgan Mahsulotlarimiz</h2>
+
+        <div class="product-item">
+            <img src="https://mtscdn.ru/upload/images/obzor-galaxy-s23-ultra-1.jpg/resize/960x960/" alt="Mahsulot 1">
+            <h3>Mahsulot 1</h3>
+            <p>$29.99</p>
+            <a href="savad.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtHYiHWf0WQbv-XmGSGTcklZSn5gytGtJCAw&s" alt="Mahsulot 2">
+            <h3>Mahsulot 2</h3>
+            <p>$39.99</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuxen4Zo5OLfxfS_I_3O_2QN5sOk-y8PX1LQ&s" alt="Mahsulot 3">
+            <h3>Mahsulot 3</h3>
+            <p>$49.99</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+      
+        <div class="product-item">
+            <img src="https://fivm.giglink.uz/source/1/E9Iph01dzb8qTTI6tWGOudMy_ZfuPtbs.jpg" alt="Mahsulot 4">
+            <h3>Mahsulot 4</h3>
+            <p>$20.47</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ53hS__s87EaZwGBMiQfqUwca0Fk0jgZvBvQ&s" alt="Mahsulot 5">
+            <h3>Mahsulot 5</h3>
+            <p>$25.99</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://olcha.uz/image/700x700/products//supplier/stores/27199/tecno-pova-6%2Fgo-1-7.png" alt="Mahsulot 6">
+            <h3>Mahsulot 6</h3>
+            <p>$18.75</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-jmQq9IQa5Nk55r1aomR9_20TxumBx_aF8Q&s" alt="Mahsulot 7">
+            <h3>Mahsulot 7</h3>
+            <p>$40.99</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9JXD1XH5gARPvgudDRsvQnCq9XLuL3zkKA&s" alt="Mahsulot 8">
+            <h3>Mahsulot 8</h3>
+            <p>$35.50</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkYFtDEUU2W8zYe2VeCEp7OCbyWWn4TRwAdw&s" alt="Mahsulot 9">
+            <h3>Mahsulot 9</h3>
+            <p>$22.10</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSefrX6Ctb06kH95n_JD3moT-HzjO-fU8U3A&s" alt="Mahsulot 10">
+            <h3>Mahsulot 10</h3>
+            <p>$15.89</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDTGP3c9DStmNZpfvh5pn2f8i2gYP0bCoJ-w&s" alt="Mahsulot 11">
+            <h3>Mahsulot 11</h3>
+            <p>$12.99</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8jjgLehEwH5_-VgSDeMijbwL83ksCiNnMdA&s" alt="Mahsulot 12">
+            <h3>Mahsulot 12</h3>
+            <p>$28.40</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://static.my.ge/mymarket/photos/large/0127/29559332_1.jpg?v=76" alt="Mahsulot 13">
+            <h3>Mahsulot 13</h3>
+            <p>$30.10</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYTCizu946SV871fL4Vj3YZDT89EhvR_CjfA&s" alt="Mahsulot 14">
+            <h3>Mahsulot 14</h3>
+            <p>$50.99</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+        <div class="product-item">
+           <img src="data:image/jpeg;base64,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
+           Sur0nK1REXumUIi
+           IAiIgCIiAIiID/2Q==" alt="Mahsulot 15">
+            <h3>Mahsulot 15</h3>
+            <p>$60.00</p>
+            <a href="savatw.html"><button>Savatchaga qo'shish</button></a>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="contact">
+        <h2>Aloqa</h2>
+        <form>
+            <label for="name">Ismingiz</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Elektron pochta</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Xabar</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Yuborish</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Onlayn Do'konim</p>
+    </footer>
+
+</body>
+</html>

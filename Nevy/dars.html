@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baxolash Tizimi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .star {
+      font-size: 40px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .star:hover,
+    .star.selected {
+      color: gold;
+    }
+
+    #rating {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Baxolash Tizimi</h1>
+    <p>Ilovaga baho bering:</p>
+
+    <!-- Yulduzlarni tanlash -->
+    <div id="stars">
+      <span class="star" data-value="1">★</span>
+      <span class="star" data-value="2">★</span>
+      <span class="star" data-value="3">★</span>
+      <span class="star" data-value="4">★</span>
+      <span class="star" data-value="5">★</span>
+    </div>
+
+    <p id="rating"></p>
+  </div>
+
+  <script>
+    // Yulduzlarni tanlash va bahoni ko'rsatish uchun JavaScript
+    const stars = document.querySelectorAll('.star');
+    const ratingText = document.getElementById('rating');
+
+    // Yulduzlarga bosganda, baho o'zgartirish
+    stars.forEach(star => {
+      star.addEventListener('click', function() {
+        const ratingValue = this.getAttribute('data-value');
+        
+        // Barcha yulduzlarni tozalash
+        stars.forEach(s => s.classList.remove('selected'));
+
+        // Bosilgan yulduzdan oldingi yulduzlarni "selected" qilib belgilash
+        for (let i = 0; i < ratingValue; i++) {
+          stars[i].classList.add('selected');
+        }
+
+        // Tanlangan bahoni ko'rsatish
+        ratingText.textContent = `Siz tanlagan baho: ${ratingValue} yulduz`;
+      });
+    });
+  </script>
+</body>
+</html>

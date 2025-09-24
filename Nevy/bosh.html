@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: white; 
+        }
+
+        .background-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            color: rgb(202, 143, 143);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); 
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .col {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+     
+        .carten {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            flex-wrap: wrap; 
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 16px;
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 16px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://cdn.pixabay.com/photo/2018/01/04/20/52/dark-3061610_640.jpg" alt="Background Image" class="background-img">
+    <h1>THE BEST CAR SHOP</h1>
+    <p>Bizning the best car do'konimizda bracha turdagi Mashinalar bor. Biz asosan Bugatti avtomobilini ko'p savdo qilamiz.</p>
+    
+    <div class="col">
+        <h1>Bizning avtomobillarimiz</h1>
+        <div class="carten">
+            <div class="card">
+                <img src="74cac3e5-b811-4580-9995-9c45dc657876_removalai_preview.png" class="card-img-top" alt="Car Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Bugatti Chiron</h5>
+                    <p class="card-text">Bu Bugatti Chiron, dunyodagi eng tezkor avtomobillardan biridir.</p>
+                    <p class="card-text"><small class="text-muted">11,5 million AQSh dollari</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="aebe0cb1-e712-4422-a4ef-e99f932630df_removalai_preview.png" class="card-img-top" alt="Car Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Nissan GTR</h5>
+                    <p class="card-text">Bu Nissan GTR uning ajoyib dizayni va tezligi bilan tanilgan.</p>
+                    <p class="card-text"><small class="text-muted">$115,435 AQSh dollari</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="146fba71-f09c-4e94-9471-72d2f342536e_removalai_preview.png" class="card-img-top" alt="Car Image 3">
+                <div class="card-body">
+                    <h5 class="card-title">BMW M8</h5>
+                    <p class="card-text">"BMW M8 — ajoyib ishlash va qulaylikka ega, hashamatli sport avtomobilidir."</p>
+                    <p class="card-text"><small class="text-muted">$140,000 AQSh dollari</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFS4dP4AsPzQb6miE5fvZtDhLzE6GfppayQKjr1yKkX9" crossorigin="anonymous"></script>
+</body>
+</html>

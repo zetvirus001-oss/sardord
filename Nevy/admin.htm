@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+        font-family: Arial,sans-serif;
+        background-color: red ;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black ;
+            padding: 10px 20px;
+            color: white;
+        }
+        .navbar .logo{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        ul li{
+            margin: 0 15px;
+        }
+        ul a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .hamburger{
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        @media screen and (max-width:768px) {
+            ul{
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #444;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+            ul.active{
+                display: flex;
+            }
+            .ven li{
+                margin: 10px 0;
+            }
+            .hamburger{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"></div>
+        <ul class="ven">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">service</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="hamburger">☰</div>
+    </div>
+    <script>
+        const hamburger = document.querySelector(".hamburger")
+        const ven = document.querySelector(".ven")
+        
+        hamburger.addEventListener("click", () => {
+            ven,classList.toggle("active")
+        })
+    </script>
+</body>
+</html>

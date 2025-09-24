@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #69076b;
+      position: relative;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      padding: 15px 20px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px;
+      border-radius: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #222;
+        flex-direction: column;
+        width: 200px;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .hamburger {
+        display: flex;
+      }
+
+      /* kartalar moslashadi */
+      .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    h1, h3 {
+      font-size: 50px;
+      font-weight: bold;
+      background: linear-gradient(to right, yellow, rgb(0, 255, 229), #ffffff, green);
+      -webkit-background-clip: text;
+      color: transparent;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 70px;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    h3 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      object-fit: cover;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+      gap: 30px;
+      padding: 50px 20px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.1);
+    }
+
+    .card-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 180px;
+    }
+
+    .card-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .card-description {
+      font-size: 14px;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .card-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #28a745;
+    }
+
+    .card-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .card-button a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .card-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>AvtoDo'kon</h2>
+    <div class="nav-links" id="navLinks">
+      <a href="#">Bosh sahifa</a>
+      <a href="#cards">Avtomobillar</a>
+      <a href="savdo.html">Savdo</a>
+      <a href="#aloqa">Aloqa</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <img class="background-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0QFUyPBX9EDGogLfBAzQIoNTaHLkg9N7ckw&s" alt="Background Image">
+  <h1>Eng qimmat avtomobilar</h1>
+  <h3>Bizning do'konda dunyo bo'yicha eng qimmat avtomobillar bor</h3>
+
+  <!-- Kartalar -->
+  <div class="card-container" id="cards">
+    <!-- bu yerga siz yozgan kartalaringizni joylashtirishingiz mumkin -->
+  </div>
+
+  <script>
+    // Hamburger menyu ishlashi
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

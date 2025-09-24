@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100%;
+            height: 60vh;
+            display:flex;
+        }
+        .cat{
+            width: 100%;
+            height: 50vh;
+            background-color: red;
+        }
+        .cat1{
+            width: 100%;
+            height: 50vh;
+            background-repeat: no-repeat;
+        }
+        .cat2{
+           width: 100%;
+           height: 50vh;
+           background-color: aqua;
+        }
+        @media screen and (min-width:850px) {
+            .cat{
+                display: none;
+            }
+        }
+        @media screen and (max-width:850px) {
+            .cat2{
+                display: none;
+            }
+            .box{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="cat">rasm</div>
+        <div style="background-image: url(./5413453535695207140\ \(1\).jpg);" class="cat1"></div>
+        <div class="cat2">lorem</div>
+    </div>
+</body>
+</html>

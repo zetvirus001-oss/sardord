@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../Salom PHP"
+		},
+		{
+			"path": "../WEB MASTER"
+		},
+		{
+			"path": "../gul"
+		},
+		{
+			"path": "../soat"
+		},
+		{
+			"path": "../yangi fayl"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Nevy"
+	}
+}

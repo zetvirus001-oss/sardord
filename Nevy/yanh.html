@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding: 70px 570px;
+       
+    }
+    .box{
+        width: 90%;
+        height: 70vh;
+        border: 9px solid black;
+        border-radius: 20px;
+    }
+       .box1{
+        width: 100%;
+        height: 90vh;
+        border: 9px solid black;
+        border-radius: 20px;
+        display: none;
+        background-color: red;
+    }
+    .ilova img{
+        width: 40px;
+        
+    }
+</style>
+<body>
+    <div id="s" class="box">
+        <button id="a">Soat</button>
+    </div>
+      <div id="b" class="box1">
+        <button id="v"><img src="https://img.icons8.com/?size=100&id=2YPST59G2xJZ&format=png&color=000000" alt=""></button>
+     
+    </div>
+    
+    <script>
+        let b = document.getElementById("b");
+          let s = document.getElementById("s");
+        let a = document.getElementById("a").addEventListener("click", function() {
+  b.style.display="block";
+  s.style.display="none";
+});
+ let v = document.getElementById("v").addEventListener("click", function() {
+  b.style.display="none";
+  s.style.display="block";
+});
+    </script>
+</body>
+</html>

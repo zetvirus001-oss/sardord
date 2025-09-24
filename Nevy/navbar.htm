@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: black;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .navbar .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        ul li {
+            margin: 0 15px;
+        }
+
+        ul a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 1768px) {
+            ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: blue;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            ul.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+
+        .text {
+            color: white;
+            margin-left: 800px;
+            position: absolute;
+            top: 40%;
+        }
+
+        .text b {
+            font-size: 100px;
+            color: blue;
+        }
+
+        .text h2 {
+            font-size: 50px;
+            margin-left: 5px;
+        }
+
+        .text h4 {
+            font-size: 30px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .cam {
+            position: absolute;
+            top: 105%;
+            width: 400px;
+            height: 400px;
+            margin-left: 120px;
+        }
+
+        .detal p {
+            margin-left: 1000px;
+            position: absolute;
+            top: 160%;
+            font-size: 22px;
+        }
+
+        .detal button {
+            margin-top: 490px;
+            margin-left: 100px;
+            border-radius: 50px;
+            width: 290px;
+            height: 70px;
+            background-color: blue;
+        }
+
+        .detal button:hover {
+            background-color: white;
+            color: blue;
+        }
+
+        .detal h5 {
+            color: white;
+            font-size: 15px;
+            position: relative;
+            left: 1000px;
+            margin-top: -50px;
+        }
+
+        video {
+            width: 1500px;
+        }
+
+        
+        .video {
+            position: relative;
+        }
+
+        .video button {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            background-color: blue;
+            border-radius: 50px;
+            width: 290px;
+            height: 70px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .video button:hover {
+            background-color: white;
+            color: blue;
+        }
+        .kumir button{
+            transform: translateX(-50%);
+            background-color: blue;
+            margin-left: 765px;
+            border-radius: 50px;
+            width: 290px;
+            height: 70px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: -250px;
+        }
+        .pes iframe{
+            width: 80%;
+            margin-left: 150px;
+            height: 100vh;
+        }
+        .pes button{
+            transform: translateX(-50%);
+            background-color: blue;
+            margin-left: 795px;
+            border-radius: 50px;
+            width: 290px;
+            height: 70px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: -250px;
+        }
+        .kemir iframe {
+    width: 100%;    
+    height: 200vh;  
+   
+}   .kemir button{
+    transform: translateX(-50%);
+            background-color: blue;
+            margin-left: 795px;
+            border-radius: 50px;
+            width: 290px;
+            height: 70px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: -950px;
+}
+button:hover{
+    background-color: white;
+    color: blue;
+}
+.imgd img{
+    margin-left: 650px;
+    margin-top: -350px;
+}
+.imgd h2 {
+    color: white;
+    margin-left: 600px;
+  font-size: 50px;
+    margin-top: -100px;
+}
+.imgd h1{
+    color: blue;
+    margin-left: 560px;
+    margin-top: 100px;
+    font-size: 120px;
+}
+.gwer{
+    background-color: blue;
+    height: 50vh;
+}
+.gwer img{
+ width: 100px;
+ height: 80px;
+ margin-top: 150px;
+}
+.hulet{
+    color: white;
+    margin-left: 300px;
+    margin-top: -80px;
+   
+}
+.xulet{
+    color: white;
+    margin-left: 600px;
+    margin-top: -80px;
+}
+.kulet{
+    color: white;
+    margin-left: 900px;
+    margin-top: -80px;
+}
+.img img{
+    margin-left: 1100px;
+    margin-top: -380px;
+}
+.img2 img{
+    margin-left: 1170px;
+    margin-top: -425px;
+    width: 60px;
+    height: 40px;
+}
+.img3 img{
+    margin-left: 1250px;
+    margin-top: -465px;
+    width: 60px;
+    height: 43px;
+}
+.img4 img{
+    margin-left: 1330px;
+    margin-top: -515px;
+    width: 60px;
+    height: 50px;
+}
+.img5 img{
+    margin-left: 1410px;
+    margin-top: -555px;
+    width: 60px;
+    height: 40px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo"><img style="width: 50px ;height: 50px;" src="logo-0.png" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="hamburger">☰</div>
+    </div>
+
+    <div class="kloze">
+        <img style="margin-left: 120px;" src="can-2.webp" alt="">
+        <div class="text">
+            <b>WELCOME</b>
+            <h2>LET’S GET STARTED</h2>
+            <h4>CHECK OUT THE LATEST DRO</h4>
+        </div>
+    </div>
+
+    <div class="detal">
+        <img style="width: 900px; margin-top: 100px;" src="./5413453535695207140 (1).jpg" alt="">
+        <img class="cam" src="./3303000_PepsicomRevamp_MarchDrop_HEADLINE_Transparent_R2.png" alt="">
+        <p style="color: white;">Enter now for a chance to win this limited edition item.</p>
+        <button type="button" class="btn btn-primary">VIEW PRODUCTS</button>
+        <h5>U.S. res 18+(19+ in AL/NE). Ends 3/31/25. Limit one entry per person/email <br> address per day. Subject to Official Rules</h5>
+    </div>
+
+    <div class="video">
+        <video muted autoplay src="https://www.pepsi.com/assets/videos/pepsi-cans.mp4"></video>
+        <button type="button" class="btn btn-primary">SIGN IN TO ENTER</button>
+    </div>
+    <div class="kumir">
+        <iframe width="100%" height="615" src="https://www.youtube.com/embed/5TwKmdGUExY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button type="button" class="btn btn-primary">CHECK IT OUT</button>
+    </div>
+    <div class="pes">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AU1gmFQhy3s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button type="button" class="btn btn-primary">CHECK IT OUT</button>
+    </div>
+    <div class="kemir">
+        <iframe src="https://www.pepsi.com/s3fs-public/2024-07/bwp-desktop.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button type="button" class="btn btn-primary">VIEW RECIPES</button> 
+    </div>
+    <div class="imgd">
+        <img src="logo-0.png" alt="">
+        <h2>STAY ON THE<h2>
+        <h1>PULSE</h1>
+    </div>
+    <div class="gwer">
+        <img src="logo-0.png" alt="">
+        <div class="hulet">
+        <h6>CONTACT US</h6>
+        <h6>TERMS & CONDITSION</h6>
+        <h6>PRIVACY POLICE</h6>
+        </div>
+        <div class="xulet">
+            <h6>COPYRIGHT</h6>
+            <h6>PRODUCT FACTS</h6>
+            <h6>STORE LOCATOR</h6>
+        </div>
+        <div class="kulet">
+            <h6>SERVE PEPSI</h6>
+            <h6>ABOUT OUR ADS</h6>
+            <h6>CAREERS</h6>
+        </div>
+    </div>
+    <div class="img">
+        <img src="https://img.icons8.com/?size=64&id=32320&format=png" alt="">
+    </div>
+    <div class="img2">
+        <img src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png" alt="">
+    </div>
+    <div class="img3">
+        <img src="https://img.icons8.com/?size=100&id=8818&format=png" alt="">
+    </div>
+    <div class="img4">
+        <img src="https://img.icons8.com/?size=100&id=37326&format=png" alt="">
+    </div>
+    <div class="img5">
+        <img src="https://img.icons8.com/?size=100&id=118638&format=png" alt="">
+    </div>
+   
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+       
+    </script>
+
+</body>
+</html>

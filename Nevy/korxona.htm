@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharbat ishlab chiqarish korxonasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #ff8c00;
+            padding: 10px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .main-content, .product-list, .contact-form {
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .product {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        form input[type="submit"] {
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #e07a00;
+        }
+
+ 
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 15px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .product-card h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .product-card p {
+            font-size: 1em;
+            color: #555;
+            padding: 0 10px 15px;
+        }
+
+        .product-card .price {
+            font-size: 1.2em;
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<header>
+    <div class="logo">
+        <h1>Sharbat Korxonasi</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Bosh sahifa</a></li>
+            <li><a href="#products">Mahsulotlar</a></li>
+            <li><a href="#contact">Aloqa</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="main-content">
+    <h2>Biz haqimizda</h2>
+    <p>Bizning korxonamiz eng sifatli va foydali sharbatlarni ishlab chiqaradi. O'zbekiston bo'ylab hamda xorijga ham mahsulotlarimizni yetkazib beramiz.</p>
+</section>
+
+
+<section id="products" class="product-list">
+    <h2>Bizning Mahsulotlarimiz</h2>
+    
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1x1g8f0NgncD0vcWF-he7DL1WVZnvKS6pGA&s" alt="Apelsin Sharbatı">
+        <h3>Apelsin Sharbatı</h3>
+        <p>Eng yangi apelsinlardan tayyorlangan sharbat. 100% tabiiy.</p>
+        <p class="price">30 000 UZS</p>
+    </div>
+
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdDlw_kDrHDY3zXwgXuzMlmVI187AcJqSwdg&s" alt="Olma Sharbatı">
+        <h3>Olma Sharbatı</h3>
+        <p>Olma sharbatimiz sog'lik uchun foydali va mazali.</p>
+        <p class="price">25 000 UZS</p>
+    </div>
+
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT05ZqLMpg0Ycez2tz_NGCBLassUGOMAA3I2Q&s" alt="Gilos Sharbatı">
+        <h3>Gilos Sharbatı</h3>
+        <p>Gilosdan tayyorlangan, vitaminlarga boy sharbat.</p>
+        <p class="price">35 000 UZS</p>
+    </div>
+
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg4ff8OnKSknTWZrWpTli0CuNMukFN-xKDew&s" alt="Anor Sharbatı">
+        <h3>Anor Sharbatı</h3>
+        <p>Anorning foydali vitaminlari bilan boyitilgan.</p>
+        <p class="price">40 000 UZS</p>
+    </div>
+
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq6HRkNqWS0B2xvxrDBpsHbhGRmY1cQcqPVQ&s" alt="Qulupnay Sharbatı">
+        <h3>Qulupnay Sharbatı</h3>
+        <p>Qulupnaydan tayyorlangan yangi va mazali sharbat.</p>
+        <p class="price">28 000 UZS</p>
+    </div>
+
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsM_CYMr_dSWMWFm2QKuQerW3rF1Fihn6spA&s" alt="Banan Sharbatı">
+        <h3>Banan Sharbatı</h3>
+        <p>Banan va boshqa foydali ingredientlar bilan tayyorlangan sharbat.</p>
+        <p class="price">32 000 UZS</p>
+    </div>
+
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV8T6Gh87ITOTunhzxTV38vUPQACz9bED-0A&s" alt="Ananas Sharbatı">
+        <h3>Ananas Sharbatı</h3>
+        <p>Mevali ananasdan tayyorlangan, xushbo'y sharbat.</p>
+        <p class="price">36 000 UZS</p>
+    </div>
+
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--ceFKunWO8GzKhk_VesEz6NCzS9KTdBbgQ&s" alt="Limon Sharbatı">
+        <h3>Limon Sharbatı</h3>
+        <p>Endi limon va asal bilan kuchaytirilgan sharbat.</p>
+        <p class="price">27 000 UZS</p>
+    </div>
+
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR95uyDh8havXUfOcOJlTjjdI4l042bar0Lww&s" alt="O'rik Sharbatı">
+        <h3>O'rik Sharbatı</h3>
+        <p>O'rikdan tayyorlangan, vitaminlarga boy sharbat.</p>
+        <p class="price">33 000 UZS</p>
+    </div>
+
+    <div class="product-card">
+        <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC6AiKvqVBhkolbAbxJaKkRSeKLp8q9oXPWg&s" alt="Kivi Sharbatı">
+        <h3>Kivi Sharbatı</h3>
+        <p>Kividan tayyorlangan va antioksidantlarga boy sharbat.</p>
+        <p class="price">38 000 UZS</p>
+    </div>
+
+    <div class="product-card">
+        <img src="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH5H8fBq2MYF-DRCywBZxlL28UUsb_YawizQ&s" alt="Mango Sharbatı">
+        <h3>Mango Sharbatı</h3>
+        <p>Mango mevasidan tayyorlangan, tropik ta'mga ega sharbat.</p>
+        <p class="price">42 000 UZS</p>
+    </div>
+
+</section>
+
+<section id="contact" class="contact-form">
+    <h2>Aloqa</h2>
+    <form>
+        <label for="name">Ismingiz:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email manzilingiz:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Xabaringiz:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Yuborish">
+    </form>
+</section>
+
+<footer>
+    <p>2025 Sharbat Korxonasi. Barcha huquqlar himoyalangan.</p>
+</footer>
+
+</body>
+</html>
